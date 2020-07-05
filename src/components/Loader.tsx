@@ -2,7 +2,8 @@ import {
   View,
   StyleSheet,
   Image,
-  Text,
+  TouchableOpacity,
+  LayoutAnimation,
   //select do react-native
 } from "react-native";
 import React from "react";
@@ -12,6 +13,7 @@ import Draggable from "react-native-draggable";
 
 const Loader = () => {
   const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.box}>
@@ -25,15 +27,9 @@ const Loader = () => {
             isCircle
             shouldReverse
           />
-          <Draggable
-            x={50}
-            y={50}
-            onDragRelease={() => navigation.navigate("Entry")}
-          >
+          <Draggable x={50} y={50} onDrag={() => navigation.navigate("Tabbar")}>
             <Image source={require("./../assets/Nuvem.png")} />
           </Draggable>
-          <Text>Aperte, puxe ou pressione a nuvem!</Text>
-          <Text>Vamos começar a sua jornada.</Text>
         </View>
       </View>
     </SafeAreaView>

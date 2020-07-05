@@ -5,10 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 const AppStack = createStackNavigator();
 
 import Tabbar from "./components/ToolBar/Tabbar";
-import Entry from "./pages/Entry";
 
 import Loader from "./components/Loader";
-import App from "../App";
 
 const Routes = () => {
   return (
@@ -23,7 +21,6 @@ const Routes = () => {
         }}
       >
         <AppStack.Screen name="Loader" component={Loader} />
-        <AppStack.Screen name="Entry" component={Entry} />
         <AppStack.Screen name="Tabbar" component={Tabbar} />
       </AppStack.Navigator>
     </NavigationContainer>
