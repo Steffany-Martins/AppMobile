@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Image,
   Dimensions,
+  StatusBar,
   //select do react-native
 } from "react-native";
 import React from "react";
@@ -24,37 +25,45 @@ const DEVICE_FONT = Dimensions.get("window").fontScale;
 
 const Profile = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <LinearGradient
-          colors={["#FF5B7F", "#FC9272"]}
-          style={{
-            left: 0,
-            right: 0,
-            top: 0,
-            height: DEVICE_HEIGHT,
-            flex: 1,
-          }}
-        >
-          <Text accessibilityLabel="Perfil">Profile</Text>
-          <ProgressCircle
-            percent={30}
-            radius={50}
-            borderWidth={8}
-            color="#3F5CC8"
-            shadowColor="#999"
-            bgColor="#fff"
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <LinearGradient
+            colors={["#FF5B7F", "#FC9272"]}
+            style={{
+              left: 0,
+              right: 0,
+              top: 0,
+              height: DEVICE_HEIGHT,
+              flex: 1,
+            }}
           >
-            <Image
-              source={require("./../../assets/Profile/design icon.png")}
-              accessibilityLabel="Imagem Perfil"
-              accessibilityHint="Imagem de perfil pressione trocar a foto"
-            />
-          </ProgressCircle>
-        </LinearGradient>
-        <View></View>
-      </View>
-    </SafeAreaView>
+            <Text accessibilityLabel="Perfil">Perfil</Text>
+            <ProgressCircle
+              percent={30}
+              radius={50}
+              borderWidth={8}
+              color="#3F5CC8"
+              shadowColor="#999"
+              bgColor="#fff"
+            >
+              <Icon name="setting" size={20} color="white" />
+              <Image
+                source={require("./../../assets/Profile/design icon.png")}
+                accessibilityLabel="Imagem Perfil"
+                accessibilityHint="Imagem de perfil pressione trocar foto"
+              />
+            </ProgressCircle>
+          </LinearGradient>
+          <View></View>
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
 const styles = StyleSheet.create({
@@ -68,14 +77,36 @@ const styles = StyleSheet.create({
   },
   titleProfile: {
     color: "#fff",
-    fontFamily: "Poppins_400Regular",
+    fontFamily: "Poppins_400Regular" || DEVICE_FONT,
   },
   titleName: {
     color: "#fff",
-    fontFamily: "Poppins_500Medium",
+    fontFamily: "Poppins_500Medium" || DEVICE_FONT,
   },
   detailName: {
-    fontFamily: "Poppins_400Regular",
+    fontFamily: "Poppins_400Regular" || DEVICE_FONT,
+    fontSize: 12,
+  },
+  box: {
+    margin: 15,
+    marginBottom: 20,
+  },
+  boxAbout: {
+    marginBottom: 10,
+  },
+  boxIcon: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+  },
+  imageQuiz: {
+    height: 20,
+    width: 30,
   },
 });
+
 export default Profile;
