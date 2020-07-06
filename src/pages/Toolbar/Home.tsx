@@ -21,6 +21,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const DEVICE_HEIGHT = Dimensions.get("window").height;
 const DEVICE_FONT = Dimensions.get("window").fontScale;
+const DEVICE_WIDTH = Dimensions.get("window").width;
 
 const Home = () => {
   const navigation = useNavigation();
@@ -136,11 +137,11 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
 
     elevation: 6,
-    padding: 10,
+    padding: 30,
     textAlign: "justify",
     justifyContent: "center",
     borderRadius: 20,
-    margin: 20,
+    margin: 30,
     marginEnd: 50,
   },
   titleCaption: {

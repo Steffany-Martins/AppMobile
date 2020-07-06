@@ -7947,6 +7947,13 @@ react-native-splash-screen@^3.2.0:
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
   integrity sha512-Ls9qiNZzW/OLFoI25wfjjAcrf2DZ975hn2vr6U9gyuxi2nooVbzQeFoQS5vQcbCt9QX5NY8ASEEAtlLdIa6KVg==
 
+react-native-super-grid@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-super-grid/-/react-native-super-grid-4.0.2.tgz#1d549b1919d4d99b669b5a00719c04c3d442c31b"
+  integrity sha512-EB/60LVoXev5VV2Jb5WlpcoMBqgUljG6LWwJpSvKxK09HAhEhE9ZO1wUbZUzNnr1nYFXXnSlz0zJSkA8VELaCA==
+  dependencies:
+    prop-types "^15.6.0"
+
 react-native-svg-uri@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/react-native-svg-uri/-/react-native-svg-uri-1.2.3.tgz#2f67f30564068a0fee68a751845332a5185a1aab"

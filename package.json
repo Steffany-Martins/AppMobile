@@ -40,6 +40,7 @@
     "react-native-safe-area-context": "^3.0.7",
     "react-native-screens": "^2.9.0",
     "react-native-splash-screen": "^3.2.0",
+    "react-native-super-grid": "^4.0.2",
     "react-native-svg": "12.1.0",
     "react-native-svg-uri": "^1.2.3",
     "react-native-swiper": "^1.6.0",
